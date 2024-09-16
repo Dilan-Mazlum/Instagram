@@ -1,5 +1,9 @@
 .main{
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 260px 650px 440px  ;
+    grid-row: auto;
+ 
 
 }
 #container{
@@ -49,17 +53,13 @@
 .text1{
     padding-left: 12px;
 }
-.top{
-    padding-left: 261px;
-    width: 650px;
-    position: relative;
-}
+
 .follows{
     height: 75px;
     border-bottom: #dbdbdb solid 2px;
     display: flex;
     gap: 13px;
-    margin-top: 30px;
+
 }
 .follows-text{
     margin-top: 40px;
@@ -184,4 +184,70 @@
 #smile{
     float: right;
     font-size: 17px;
+}
+.right{
+    padding-left: 80px; 
+    padding-top: 58px;
+    display: block;
+    height: auto;
+    gap: 15px;
+
+}
+.rightContainer{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.userName-right{
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+.nameSurname-right{
+    color: #a5a4a4;
+    font-size: 15px;
+}
+.switch{
+    padding-left: 110px;
+    color:#3ea1e3;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+} 
+.switch:hover{
+    color:#344b7d;
+}
+.right-img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%; 
+    display: flex;
+}
+.suggestion{
+    padding-top:35px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.youAre{
+    color: #737373 ;
+    font-weight:600;
+    font-size: 15px;
+}
+.all{
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.all:hover{
+    color:#a5a4a4;
+}
+.suggesContainer{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-between;
+
 }
