@@ -251,3 +251,118 @@ function createPost(postData) {
 
 
 posts.forEach(postData => createPost(postData));
+
+
+const profiles = [
+    {
+        imgSrc: "/img/profile.jpeg",
+        userName: "dilanmazlum_6",
+        nameSurname: "Dilan Mazlum",
+        switchText: "Geçiş Yap"
+    },
+    {
+        imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhvh0Jgns1sRx1kj1ojf1SpBbUcjsiVb_IA&s",
+        userName: "denizcanaktas",
+        nameSurname: "Önerilen",
+        switchText: "Takip et"
+    },
+    {
+        imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeYSt591BJTqm0KXg03Gi4ok28uY60QY2ug&s",
+        userName: "iynemliarasbult",
+        nameSurname: "Önerilen",
+        switchText: "Takip et"
+    },
+    {
+        imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcRTnZWUSN45MhtAG5sDa_0H-eeO-UIgZBJA&s",
+        userName: "alperenduymaz",
+        nameSurname: "Önerilen",
+        switchText: "Takip et"
+    }
+];
+
+
+const rightSection = document.getElementById('rightSection');
+
+
+const rightContainer = document.createElement('div');
+rightContainer.classList.add('right');
+const mainProfile = profiles[0];
+const mainProfileDiv = document.createElement('div');
+mainProfileDiv.classList.add('rightContainer');
+const mainProfileImg = document.createElement('img');
+mainProfileImg.classList.add('right-img');
+mainProfileImg.src = mainProfile.imgSrc;
+const mainUserDiv = document.createElement('div');
+mainUserDiv.classList.add('user');
+const mainUserNameDiv = document.createElement('div');
+mainUserNameDiv.classList.add('userName-right');
+mainUserNameDiv.textContent = mainProfile.userName;
+const mainNameSurnameDiv = document.createElement('div');
+mainNameSurnameDiv.classList.add('nameSurname-right');
+mainNameSurnameDiv.textContent = mainProfile.nameSurname;
+
+mainUserDiv.appendChild(mainUserNameDiv);
+mainUserDiv.appendChild(mainNameSurnameDiv);
+
+
+const mainSwitchDiv = document.createElement('div');
+mainSwitchDiv.classList.add('switch');
+mainSwitchDiv.textContent = mainProfile.switchText;
+
+mainProfileDiv.appendChild(mainProfileImg);
+mainProfileDiv.appendChild(mainUserDiv);
+mainProfileDiv.appendChild(mainSwitchDiv);
+
+rightContainer.appendChild(mainProfileDiv);
+
+
+const suggestionDiv = document.createElement('div');
+suggestionDiv.classList.add('suggestion');
+const youAreDiv = document.createElement('div');
+youAreDiv.classList.add('youAre');
+youAreDiv.textContent = 'Senin için önerilenler';
+const allDiv = document.createElement('div');
+allDiv.classList.add('all');
+allDiv.textContent = 'Tümünü Gör';
+
+suggestionDiv.appendChild(youAreDiv);
+suggestionDiv.appendChild(allDiv);
+
+
+rightContainer.appendChild(suggestionDiv);
+
+for (let i = 1; i < profiles.length; i++) {
+    const profile = profiles[i]; 
+    const suggestionProfileDiv = document.createElement('div');
+    suggestionProfileDiv.classList.add('suggesContainer');
+
+    const suggestionProfileImg = document.createElement('img');
+    suggestionProfileImg.classList.add('right-img');
+    suggestionProfileImg.src = profile.imgSrc;
+    const suggestionUserDiv = document.createElement('div');
+    suggestionUserDiv.classList.add('user');
+    const suggestionUserNameDiv = document.createElement('div');
+    suggestionUserNameDiv.classList.add('userName-right');
+    suggestionUserNameDiv.textContent = profile.userName;
+    const suggestionNameSurnameDiv = document.createElement('div');
+    suggestionNameSurnameDiv.classList.add('nameSurname-right');
+    suggestionNameSurnameDiv.textContent = profile.nameSurname;
+
+    suggestionUserDiv.appendChild(suggestionUserNameDiv);
+    suggestionUserDiv.appendChild(suggestionNameSurnameDiv);
+
+    const suggestionSwitchDiv = document.createElement('div');
+    suggestionSwitchDiv.classList.add('switch');
+    suggestionSwitchDiv.textContent = profile.switchText;
+
+    suggestionProfileDiv.appendChild(suggestionProfileImg);
+    suggestionProfileDiv.appendChild(suggestionUserDiv);
+    suggestionProfileDiv.appendChild(suggestionSwitchDiv);
+
+
+    rightContainer.appendChild(suggestionProfileDiv);
+}
+
+
+rightSection.appendChild(rightContainer);
+

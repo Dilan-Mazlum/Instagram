@@ -185,7 +185,7 @@
     float: right;
     font-size: 17px;
 }
-.right{
+#rightSection{
     padding-left: 80px; 
     padding-top: 58px;
     display: block;
@@ -197,18 +197,21 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    justify-content: space-between;
 }
 .userName-right{
     font-size: 16px;
     font-weight: bold;
     padding-bottom: 2px;
+    cursor: pointer;
 }
 .nameSurname-right{
     color: #a5a4a4;
     font-size: 15px;
+    cursor: pointer;
 }
 .switch{
-    padding-left: 110px;
+    padding-left: 25px;
     color:#3ea1e3;
     font-size: 13px;
     font-weight: 600;
